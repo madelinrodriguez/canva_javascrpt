@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"type="text/css"href="css/estilos.css">
+    <title>Canvas básico</title>
+</head>
+<body> 
+
+    <h1>Canvas basico</h1>
+    <canvas id= "miCanvas" width="500" heigth="300">
+        tu navegador no soporta canvas
+    </canvas>
+    <script>
+        window.onload = function()
+        {
+            var canvas = document.getElementById("miCanvas");
+            if(canvas &&   canvas.getcontext)
+            {
+                var ctx = canvas.getcontext("2d");
+                if(ctx)
+                {
+                    alert("Bienvenidos al canvas de html");
+                }
+                else
+                {
+                    alert("Error al crear al contexto");
+                }
+            }
+            
+        }
+    </script>
+
+    
+
+
+</body>
+</html>
